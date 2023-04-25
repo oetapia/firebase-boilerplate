@@ -2,9 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Add Firebase data
+Replace database settings in the file `src/firebase.js` with the ones from your project
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+
+### `npm install`
+To install all necessary dependencies before runing any script
 
 ### `npm start`
 
