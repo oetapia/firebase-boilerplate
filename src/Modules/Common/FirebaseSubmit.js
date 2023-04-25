@@ -7,11 +7,10 @@ function FirebaseSubmit({ data, db_name, patientId }) {
 
 
 	const [loading, setLoading] = useState(false);
-
 	const [message, setMessage] = useState('');
 
 	
-  const addTodo = async (e) => {
+  const addToDB = async (e) => {
     e.preventDefault();
 
     try {
@@ -35,7 +34,7 @@ function FirebaseSubmit({ data, db_name, patientId }) {
       <Button
         type="submit"
         className="btn"
-        onClick={addTodo}
+        onClick={addToDB}
       >
         Save
       </Button>
