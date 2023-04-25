@@ -50,10 +50,14 @@ body .lead {
   font-size: 1.2em;
 }
 
-body h3, body h4, body h5, body h6, body .form-label, body .input-group-text {
+body h3, body h4, body h5, body h6 {
   color: #cea6e9;
   font-weight: 500;
   letter-spacing: 0.2em;
+}
+
+body .form-label, body .input-group-text {
+  margin-right: 1em;
 }
 
 body h1 {

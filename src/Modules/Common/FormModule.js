@@ -1,22 +1,45 @@
-import React from 'react'
-import FirebaseSubmit from './FirebaseSubmit'
+import React, { useState } from 'react'
 
-function FormModule() {
+import { Form } from 'react-bootstrap';
+
+function FormModule({data,updateData}) {
 
 
-	const submit = {'name':'Heather'}
-	const db_name = ''
+	const [formData, setFormData] = useState(data);
+
+	const handleChange = (e) => {
+	  const { id, value } = e.target;
+	  const updatedFormData = {
+		...data,
+		[id]: value
+	  };
+	  setFormData(updatedFormData);
+	  updateData(updatedFormData);
+	};
+  
+
 
   return (
 	<>
 		<p>
 			Hello this is a module
 		</p>
-		<FirebaseSubmit 
-		data={submit} 
-		db_name={db_name? db_name : "testing"} 
-		//patientId={patientId} 
-		/>
+
+		<Form.Group className="input-group mb-2"  controlId="email">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control type="email" placeholder="Enter email"  
+            defaultValue={formData.email}
+            onChange={handleChange} />
+        </Form.Group>
+
+        <Form.Group className="input-group mb-2"  controlId="img">
+            <Form.Label>Image</Form.Label>
+            <Form.Control placeholder="url" 
+            defaultValue={formData.img}
+            onChange={handleChange} />
+          </Form.Group>
+
+		
 
 	</>
 	
