@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from '../Pages/Home'
+import InnerPage from '../Pages/InnerPage'
 
 
 function Pages() {
@@ -8,6 +9,7 @@ function Pages() {
 	<>
 		<Routes>
 			<Route index="/"  element={<Home/>} />
+			<Route path="/page"  element={<InnerPage/>} />
 		</Routes>	
 	</>
   )
